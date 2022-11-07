@@ -3,12 +3,16 @@ import ProductCard from "./ProductCard";
 
 const Products = () => {
   const [allProduct, setallProduct] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/product`)
       .then((res) => res.json())
-      .then((data) => setallProduct(data.data));
-  }, []);
+      .then((data) => {
+        setLoading(!loading);
+        setallProduct(data.data);
+      });
+  }, [loading]);
   console.log(allProduct);
   return (
     <div className="mx-20">
