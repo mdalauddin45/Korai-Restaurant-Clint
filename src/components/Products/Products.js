@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
+import ProductCard from "./ProductCard";
 
 const Products = () => {
-  const [product, setProduct] = useState([]);
+  const [allProduct, setallProduct] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:5000/product`)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setallProduct(data.data));
   }, []);
+  console.log(allProduct);
   return (
-    <div>
-      <h1>Products</h1>
+    <div className="grid grid-cols-3 max-w-screen-xl mx-auto">
+      {allProduct.map((product) => (
+        <ProductCard product={product} key={product._id}></ProductCard>
+      ))}
     </div>
   );
 };
