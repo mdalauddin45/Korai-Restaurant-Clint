@@ -1,0 +1,60 @@
+[
+    {
+    "name":"Singara",
+    "price":10,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/tqHNJ19/azak-listing.webp",
+    "rating":{"rate":5.0}
+    },
+    {
+    "name":"Nodelos",
+    "price":20,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/YXSY4kK/cyzk-listing.webp",
+    "rating":{"rate":1.9}
+    },
+    {
+    "name":"Beef",
+    "price":15,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/rdmx0CY/k7qb-listing.webp",
+    "rating":{"rate":2.9}
+    },
+    {
+    "name":"Chap",
+    "price":32,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/7nBsKRW/k80s-listing.jpg",
+    "rating":{"rate":4.9}
+    },
+    {
+    "name":"Chicken",
+    "price":27,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/Mhmr1R8/ks5j-listing.webp",
+    "rating":{"rate":3.9}
+    },
+    {
+    "name":"Burgar",
+    "price":40,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/P52mZ5K/rn6n-listing.webp",
+    "rating":{"rate":4.0}
+    },
+    {
+    "name":"Biriyani",
+    "price":49,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/S5SMVJT/t7ez-listing.webp",
+    "rating":{"rate":5.0}
+    },
+    {
+    "name":"Phita",
+    "price":18,
+    "description":"Food is any substance consumed to provide nutritional support for an organism. Food is usually of plant, animal, or fungal origin, and contains essential ... our food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy.",
+    "image":"https://i.ibb.co/RbDyrRT/wrqi-listing.webp",
+    "rating":{"rate":4.9}
+    }
+]
+
+
