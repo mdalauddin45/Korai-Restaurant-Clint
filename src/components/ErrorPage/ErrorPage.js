@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
@@ -14,13 +15,13 @@ const ErrorPage = () => {
           <p className="mt-4 mb-8 dark:text-gray-400">
             But dont worry, you can find plenty of other things on our homepage.
           </p>
-          <a
+          <Link
             rel="noopener noreferrer"
-            href="#"
+            to="/"
             className="px-8 py-3 font-semibold rounded dark:bg-green-400 dark:text-gray-900"
           >
             Back to homepage
-          </a>
+          </Link>
         </div>
       </div>
     </section>

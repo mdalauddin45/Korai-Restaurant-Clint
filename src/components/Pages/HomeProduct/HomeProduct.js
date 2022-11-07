@@ -12,18 +12,18 @@ function HomeProduct() {
         setProducts(data.data);
       });
   }, []);
-  console.log(products);
+  //   console.log(products);
 
   return (
     <div className="bg-[#eee] px-20 pt-10">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-10 mb-6 ">
-        {products?.splice(0, 3).map((product) => (
+        {products?.slice(0, 3).map((product) => (
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </div>
 
       <div className="text-center">
-        <Link to="/products ">
+        <Link to="/product">
           <button className="btn">See All</button>
         </Link>
       </div>
