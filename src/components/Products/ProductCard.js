@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
   console.log(product);
   const { image, name, price, rating, description } = product;
   return (
-    <div>
+    <div className="mb-10">
       <div className="max-w-xs p-6 rounded-md shadow-md bg-gray-900 text-gray-50">
         <img
           src={image}
