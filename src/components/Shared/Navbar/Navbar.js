@@ -71,7 +71,10 @@ const Navbar = () => {
               <Link to="/my-review">My reviews</Link>
             </li>
             <li>
-              <Link to="/add-service">Add Service</Link>
+              <Link to="/addproduct">Add Service</Link>
+            </li>
+            <li>
+              <Link to="/product">Services</Link>
             </li>
           </ul>
         </div>
