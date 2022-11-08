@@ -16,6 +16,7 @@ function HomeProduct() {
 
   return (
     <div className="bg-[#eee] px-20 pt-10">
+      <h1 className="text-center font-bold text-2xl">OUR POPULAR ITEM</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-10 mb-6 ">
         {products?.slice(0, 3).map((product) => (
           <ProductCard key={product._id} product={product}></ProductCard>
