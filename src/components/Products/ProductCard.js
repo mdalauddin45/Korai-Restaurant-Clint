@@ -6,11 +6,11 @@ const ProductCard = ({ product }) => {
   const { image, name, price, rating, description } = product;
   return (
     <div className="mb-10">
-      <div className="max-w-xs p-6 rounded-md shadow-md bg-gray-900 text-gray-50">
+      <div className="max-w-xs p-6 rounded-md shadow-xl  bg-gray-50 text-gray-900">
         <img
           src={image}
           alt=""
-          className="object-cover object-center w-full rounded-md h-72 bg-gray-500"
+          className="object-cover object-center w-full rounded-md h-72 bg-gray-900"
         />
         <div className="mt-6 mb-2">
           <span className="block text-2xl font-medium tracking-widest uppercase text-green-400">
@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
             Price: ${price}
           </h2>
         </div>
-        <p className="text-gray-100">
+        <p className="text-gray-900">
           {description.slice(0, 100) + "..."}
           <Link>Details</Link>
         </p>

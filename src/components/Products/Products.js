@@ -11,8 +11,8 @@ const Products = () => {
   }, []);
   //   console.log(allProduct);
   return (
-    <div className="mx-20">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto mt-10 mb-6  ">
+    <div className="px-20 bg-[#eee]">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto pt-10 pb-6  ">
         {allProduct?.map((product) => (
           <ProductCard product={product} key={product._id}></ProductCard>
         ))}
