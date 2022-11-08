@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import img from "../../../assets/Products image/slider-courier-mask.png";
 const Banner = () => {
   return (
-    <div className="grid lg:grid-cols-2">
-      <div className="text-black  pt-20 px-36">
+    <div className="grid md:grid-cols-2 lg:grid-cols-2">
+      <div className="text-black  pt-20 pl-20">
         <h1 className="text-5xl font-extrabold pb-5">
           <span className="text-yellow-400">Korai</span> <br />
           <span className="text-green-500"> Home Delivery</span>
@@ -23,7 +23,7 @@ const Banner = () => {
           </button>
         </Link>
       </div>
-      <div>
+      <div className="m-2">
         <img src={img} alt="/" />
       </div>
     </div>
