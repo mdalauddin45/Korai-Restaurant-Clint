@@ -3,28 +3,31 @@ import { Link } from "react-router-dom";
 import img from "../../../assets/Products image/slider-courier-mask.png";
 const Banner = () => {
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-2">
-      <div className="text-black pl-10 pt-10 lg:pl-40 md:pt-24 lg:pt-28">
-        <h1 className="text-5xl font-extrabold pb-5">
-          <span className="text-yellow-400">Korai</span> <br />
-          <span className="text-green-500"> Home Delivery</span>
-        </h1>
-        <p className="text-xl pb-10">
-          Curabitur imperdiet varius lacus, id placerat purus vulputate non.
-          Fusce in felis vel arcu maximus placerat eu ut arcu. Ut nunc ex,
-          gravida vel porttitor et, pretium ac sapien.
-        </p>
-        <Link to="/product">
-          <button
-            type="button"
-            className="px-8 py-3 font-semibold rounded-full dark:bg-green-500 dark:text-white mb-4"
-          >
-            Order Now
-          </button>
-        </Link>
-      </div>
-      <div className="m-2">
-        <img src={img} alt="/" />
+    <div className="max-w-screen-xl mx-auto p-10 ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2">
+        <div className="text-black ">
+          <h1 className="text-5xl font-extrabold pb-5">
+            <span className="text-yellow-400">Korai</span> <br />
+            <span className="text-green-500"> Home Delivery</span>
+          </h1>
+          <p className="text-xl pb-10">
+            Retail food delivery is a courier service in which a restaurant,
+            store, or independent food-delivery company delivers food to a
+            customer. An order is typically made either through a restaurant or
+            grocer's website or mobile app, or through a food ordering company.
+          </p>
+          <Link to="/product">
+            <button
+              type="button"
+              className="px-8 py-3 font-semibold rounded-full dark:bg-green-500 dark:text-white mb-4"
+            >
+              Order Now
+            </button>
+          </Link>
+        </div>
+        <div className="m-2">
+          <img src={img} alt="/" />
+        </div>
       </div>
     </div>
   );

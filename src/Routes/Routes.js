@@ -8,6 +8,7 @@ import ProductDetails from "../components/Products/ProductDetails";
 import Products from "../components/Products/Products";
 import Profile from "../components/Profile/Profile";
 import Register from "../components/Register/Register";
+import Review from "../components/Review/Review";
 import Main from "../Layout/Main";
 
 export const router = createBrowserRouter([
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       { path: "/register", element: <Register></Register> },
       { path: "/profile", element: <Profile></Profile> },
       { path: "/blog", element: <Blog></Blog> },
+      { path: "/review", element: <Review></Review> },
       { path: "/addproduct", element: <AddProduct></AddProduct> },
       {
         path: "/product/:id",

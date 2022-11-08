@@ -33,7 +33,7 @@ const Register = () => {
         // Update Name
         updateName(name)
           .then(() => {
-            toast.success("your name updated");
+            toast.success("Sign Up Succesfuly");
             navigate(from, { replace: true });
           })
           .catch((error) => console.error(error));

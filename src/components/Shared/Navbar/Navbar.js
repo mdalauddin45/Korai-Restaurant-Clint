@@ -51,11 +51,28 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to="/my-review">My reviews</Link>
+                <Link to="/">Home</Link>
               </li>
-              <li>
-                <Link to="/addproduct">Add Service</Link>
-              </li>
+              {user?.email ? (
+                <>
+                  <li>
+                    <Link to="/product">Services</Link>
+                  </li>
+                  <li>
+                    <Link to="/addproduct">Add Service</Link>
+                  </li>
+                  <li>
+                    <Link to="/review">My reviews</Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/product">Services</Link>
+                  </li>
+                </>
+              )}
+
               <li>
                 <Link to="/blog">Blog</Link>
               </li>
@@ -71,14 +88,24 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <Link to="/my-review">My reviews</Link>
-            </li>
-            <li>
-              <Link to="/addproduct">Add Service</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/product">Services</Link>
             </li>
+            {user?.email ? (
+              <>
+                <li>
+                  <Link to="/review">My reviews</Link>
+                </li>
+                <li>
+                  <Link to="/addproduct">Add Service</Link>
+                </li>
+              </>
+            ) : (
+              <></>
+            )}
+
             <li>
               <Link to="/blog">Blog</Link>
             </li>
