@@ -4,7 +4,7 @@ import logo from "../../../assets/logo.png";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../../contexts/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faRightFromBracket, faUser } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   // console.log(user);
@@ -78,7 +78,13 @@ const Navbar = () => {
         <div className="navbar-end">
           {user?.email ? (
             <>
-              <button onClick={handleLogOut}>
+              <Link
+                to="/profile"
+                className="py-1 px-2  rounded-full bg-green-400 text-xl text-white"
+              >
+                <FontAwesomeIcon icon={faUser} />
+              </Link>
+              <button className="p-2" onClick={handleLogOut}>
                 <FontAwesomeIcon icon={faRightFromBracket} />
               </button>
             </>

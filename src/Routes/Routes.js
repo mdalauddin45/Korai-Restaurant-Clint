@@ -3,6 +3,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Login from "../components/Login/Login";
 import Home from "../components/Pages/Home";
 import Products from "../components/Products/Products";
+import Profile from "../components/Profile/Profile";
 import Register from "../components/Register/Register";
 import Main from "../Layout/Main";
 
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
       { path: "/product", element: <Products></Products> },
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
+      { path: "/profile", element: <Profile></Profile> },
     ],
   },
 ]);
