@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -34,9 +35,9 @@ const Register = () => {
               className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-green-400"
             />
             <div className="flex justify-end text-xs dark:text-gray-400">
-              <a rel="noopener noreferrer" href="#">
+              <Link rel="noopener noreferrer" to="#">
                 Forgot Password?
-              </a>
+              </Link>
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
@@ -81,13 +82,13 @@ const Register = () => {
         </div>
         <p className="text-xs text-center sm:px-6 dark:text-gray-400">
           Don't have an account?
-          <a
+          <Link
             rel="noopener noreferrer"
-            href="#"
+            to="#"
             className="underline dark:text-gray-100"
           >
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>
