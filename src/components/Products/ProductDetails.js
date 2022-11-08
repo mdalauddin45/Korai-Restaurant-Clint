@@ -5,7 +5,7 @@ import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 
 const ProductDetails = () => {
   const products = useLoaderData();
-  const { image, name, price, rating, description, _id } = products.data;
+  const { image, name, price, rating, description } = products.data;
   //   console.log(products);
   const handleReview = (e) => {
     e.preventDefault();

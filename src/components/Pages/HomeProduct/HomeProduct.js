@@ -23,11 +23,11 @@ function HomeProduct() {
         ))}
       </div>
 
-      <div className="text-center">
+      <div className="text-center pb-10">
         <Link to="/product">
           <button
             type="button"
-            className="px-8 py-3 font-semibold rounded-full dark:bg-green-500 dark:text-white"
+            className="px-8 py-3 font-semibold rounded-full dark:bg-green-500 dark:text-white "
           >
             See All
           </button>
