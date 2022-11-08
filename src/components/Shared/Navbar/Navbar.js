@@ -56,13 +56,16 @@ const Navbar = () => {
               <li>
                 <Link to="/addproduct">Add Service</Link>
               </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
           <Link to="/">
             <img src={logo} className="w-12 my-2 mx-2" alt="" />
           </Link>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-            <span className="text-3xl font-bold text-green-500">KORAI</span>
+            <span className="text-xl font-bold text-green-500">KORAI</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -75,6 +78,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/product">Services</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
             </li>
           </ul>
         </div>
