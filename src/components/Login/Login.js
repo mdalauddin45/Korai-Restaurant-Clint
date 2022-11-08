@@ -71,7 +71,7 @@ const Login = () => {
       });
   };
   return (
-    <div className="bg-[#eee] ">
+    <div className="bg-[#eee]">
       <div className="max-w-screen-xl mx-auto p-10">
         <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl bg-white dark:text-gray-900 shadow-xl">
           <h1 className="text-2xl font-bold text-center">Sign in</h1>
