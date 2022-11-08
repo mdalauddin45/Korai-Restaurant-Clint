@@ -5,7 +5,7 @@ const Register = () => {
   return (
     <div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
-        <h1 className="text-2xl font-bold text-center">Login</h1>
+        <h1 className="text-2xl font-bold text-center">Sign UP</h1>
         <form
           novalidate=""
           action=""

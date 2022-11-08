@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
-        <h1 className="text-2xl font-bold text-center">Login</h1>
+    <div className="max-w-screen-xl mx-auto p-10">
+      <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-100 dark:text-gray-900 shadow-xl">
+        <h1 className="text-2xl font-bold text-center">Sign in</h1>
         <form
           novalidate=""
           action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-1 text-sm">
-            <label for="username" className="block dark:text-gray-400">
+            <label for="username" className="block dark:text-gray-900">
               Username
             </label>
             <input
@@ -20,7 +20,7 @@ const Login = () => {
               name="username"
               id="username"
               placeholder="Username"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-green-400"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-green-400"
             />
           </div>
           <div className="space-y-1 text-sm">
