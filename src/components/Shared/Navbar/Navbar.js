@@ -1,8 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.png";
-
+import { toast } from "react-toastify";
+import { AuthContext } from "../../../contexts/UserContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+  // console.log(user);
+
+  //navigate
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  //log out
+  const handleLogOut = () => {
+    logout()
+      .then(() => {
+        navigate(from, { replace: true });
+        toast.warning("log out successfuly");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div>
       <div className="navbar bg-white shadow-lg text-black">
@@ -54,17 +76,26 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">
-            <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white ">
-              Login
-            </button>
-          </Link>
-          <Link to="/register" className="m-2">
-            <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white">
-              Register
-            </button>
-          </Link>
-          <button className="btn">Log Out</button>
+          {user?.email ? (
+            <>
+              <button onClick={handleLogOut}>
+                <FontAwesomeIcon icon={faRightFromBracket} />
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white ">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register" className="m-2">
+                <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white">
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>
