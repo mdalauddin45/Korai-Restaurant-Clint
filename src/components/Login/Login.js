@@ -40,13 +40,12 @@ const Login = () => {
           .then((res) => res.json())
           .then((data) => {
             localStorage.setItem("token", data.token);
+            form.reset();
+            setError("");
+            navigate(from, { replace: true });
+            toast.success("log in succesfully");
             // console.log(data);
           });
-
-        form.reset();
-        setError("");
-        navigate(from, { replace: true });
-        toast.success("log in succesfully");
       })
       .catch((error) => {
         toast.error(error);
