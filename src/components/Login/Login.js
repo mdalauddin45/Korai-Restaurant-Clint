@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="max-w-screen-xl mx-auto p-10">
-      <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-100 dark:text-gray-900 shadow-xl">
+      <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl bg-white dark:text-gray-900 shadow-xl">
         <h1 className="text-2xl font-bold text-center">Sign in</h1>
         <form
           novalidate=""
@@ -20,7 +20,7 @@ const Login = () => {
               name="username"
               id="username"
               placeholder="Username"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-100 focus:dark:border-green-400"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -32,13 +32,8 @@ const Login = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-green-400"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
             />
-            <div className="flex justify-end text-xs dark:text-gray-400">
-              <Link rel="noopener noreferrer" to="#">
-                Forgot Password?
-              </Link>
-            </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
             Sign in
@@ -84,8 +79,8 @@ const Login = () => {
           Don't have an account?
           <Link
             rel="noopener noreferrer"
-            to="#"
-            className="underline dark:text-gray-100"
+            to="/register"
+            className="underline text-red-500 "
           >
             Sign up
           </Link>

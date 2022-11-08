@@ -3,24 +3,36 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
-        <h1 className="text-2xl font-bold text-center">Sign UP</h1>
+    <div className="max-w-screen-xl mx-auto p-10">
+      <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl bg-white dark:text-gray-900 shadow-xl">
+        <h1 className="text-2xl font-bold text-center">SIGN UP</h1>
+        <p className="text-center text-sm">
+          <span className="text-success">Welcome!</span> Please confirm that you
+          are visiting
+        </p>
         <form
           novalidate=""
           action=""
           className="space-y-6 ng-untouched ng-pristine ng-valid"
         >
           <div className="space-y-1 text-sm">
-            <label for="username" className="block dark:text-gray-400">
-              Username
-            </label>
+            <label className="block dark:text-gray-900">Name</label>
             <input
               type="text"
-              name="username"
-              id="username"
-              placeholder="Username"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-green-400"
+              name="name"
+              id="name"
+              placeholder="Enter Your Name"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
+            />
+          </div>
+          <div className="space-y-1 text-sm">
+            <label className="block dark:text-gray-900">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter Your Email"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
             />
           </div>
           <div className="space-y-1 text-sm">
@@ -32,13 +44,8 @@ const Register = () => {
               name="password"
               id="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-green-400"
+              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
             />
-            <div className="flex justify-end text-xs dark:text-gray-400">
-              <Link rel="noopener noreferrer" to="#">
-                Forgot Password?
-              </Link>
-            </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
             Sign in
@@ -81,13 +88,13 @@ const Register = () => {
           </button>
         </div>
         <p className="text-xs text-center sm:px-6 dark:text-gray-400">
-          Don't have an account?
+          Already have an account?
           <Link
             rel="noopener noreferrer"
-            to="#"
-            className="underline dark:text-gray-100"
+            to="/login"
+            className="underline font-bold text-sm text-red-500"
           >
-            Sign up
+            Sign in
           </Link>
         </p>
       </div>
