@@ -7,10 +7,11 @@ const AddProduct = () => {
     const product = {
       name: event.target.name.value,
       price: parseInt(event.target.price.value),
-      photo: event.target.photo.value,
+      rating: event.target.rating.value,
+      image: event.target.image.value,
+      description: event.target.description.value,
     };
     // console.log(product);
-
     fetch("http://localhost:5000/product", {
       method: "POST",
       headers: {
@@ -57,7 +58,7 @@ const AddProduct = () => {
                 />
               </div>
               <div className="space-y-1 text-sm flex">
-                <div>
+                <div className="py-3">
                   <label className="block dark:text-gray-900">Price</label>
                   <input
                     name="price"
@@ -66,16 +67,14 @@ const AddProduct = () => {
                     className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
                   />
                 </div>
-
-                <div className="px-10 py-3">
+                <div className="px-3 py-2">
                   <label className="block dark:text-gray-900">Rating</label>
-                  <select className="bg-white">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </select>
+                  <input
+                    name="rating"
+                    type="number"
+                    placeholder="Rating"
+                    className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
+                  />
                 </div>
               </div>
               <div className="space-y-1 text-sm">
@@ -92,13 +91,16 @@ const AddProduct = () => {
               <div className="space-y-1 text-sm">
                 <label className="block dark:text-gray-400">Photo URL</label>
                 <input
-                  name="photo"
+                  name="image"
                   type="text"
                   placeholder="Photo URL"
                   className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
                 />
               </div>
-              <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
+              <button
+                type="submit"
+                className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400"
+              >
                 Add Item
               </button>
             </form>
