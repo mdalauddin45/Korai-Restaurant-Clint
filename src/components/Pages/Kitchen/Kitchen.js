@@ -2,13 +2,13 @@ import React from "react";
 
 const Kitchen = () => {
   return (
-    <div>
+    <div className="bg-[#eee]">
       <h1 className="text-3xl text-black font-bold text-center pt-10">
         Our Kitchen Staff
       </h1>
       <hr />
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto pt-10 pb-6  ">
-        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto pt-10 pb-6 p-10">
+        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900   mb-10">
           <img
             src="http://www.themesindustry.com/html/bistro/images/our-cheffs2.jpg"
             alt=""
@@ -29,7 +29,7 @@ const Kitchen = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900">
+        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900   mb-10">
           <img
             src="http://www.themesindustry.com/html/bistro/images/our-cheffs1.jpg"
             alt=""
@@ -50,7 +50,7 @@ const Kitchen = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900">
+        <div className="max-w-xs rounded-md shadow-md dark:bg-white dark:text-gray-900   mb-10">
           <img
             src="http://www.themesindustry.com/html/bistro/images/our-cheffs3.jpg"
             alt=""
