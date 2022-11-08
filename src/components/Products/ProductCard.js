@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
           <PhotoView src={image}>
             <img
               src={image}
-              alt=""
+              alt="/"
               className="object-cover object-center w-full rounded-md h-72 bg-gray-900"
             />
           </PhotoView>
