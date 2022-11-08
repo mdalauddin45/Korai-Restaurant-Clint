@@ -123,7 +123,7 @@ const Register = () => {
             <p>{error}</p>
           </div>
           <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
-            Sign in
+            Sign Up
           </button>
         </form>
         <div className="flex items-center pt-4 space-x-1">
