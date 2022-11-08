@@ -4,7 +4,7 @@ import img2 from "../../../assets/Products image/2.webp";
 
 const Burger2 = () => {
   return (
-    <div className="bg-[#eee]">
+    <div className="bg-[#eee] p-10">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 max-w-screen-xl mx-auto pt-10">
         <div>
           <div className="text-gray-800 px-10 py-20">

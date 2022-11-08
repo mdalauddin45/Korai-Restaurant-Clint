@@ -4,8 +4,8 @@ import img from "../../../assets/Products image/slider-courier-mask.png";
 const Banner = () => {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-2">
-      <div className="text-black  pt-20 pl-20">
-        <h1 className="text-5xl font-extrabold pb-5">
+      <div className="text-black pl-20 pt-20 lg:pl-60 md:pt-32 lg:pt-32">
+        <h1 className="text-6xl font-extrabold pb-5">
           <span className="text-yellow-400">Korai</span> <br />
           <span className="text-green-500"> Home Delivery</span>
         </h1>

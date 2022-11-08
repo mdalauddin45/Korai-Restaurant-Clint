@@ -4,7 +4,7 @@ import img1 from "../../../assets/Products image/1.webp";
 
 const Burge1 = () => {
   return (
-    <div>
+    <div className="p-10">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 pb-4 max-w-screen-xl mx-auto pt-10">
         <div>
           <img src={img1} alt="" />

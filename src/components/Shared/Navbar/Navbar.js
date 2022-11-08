@@ -54,7 +54,7 @@ const Navbar = () => {
                 <Link to="/my-review">My reviews</Link>
               </li>
               <li>
-                <Link to="/add-service">Add Service</Link>
+                <Link to="/addproduct">Add Service</Link>
               </li>
             </ul>
           </div>
@@ -62,7 +62,7 @@ const Navbar = () => {
             <img src={logo} className="w-12 my-2 mx-2" alt="" />
           </Link>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-            KORAI
+            <span className="text-3xl font-bold text-green-500">KORAI</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
