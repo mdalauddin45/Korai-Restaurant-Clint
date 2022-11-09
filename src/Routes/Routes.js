@@ -9,6 +9,7 @@ import Products from "../components/Products/Products";
 import Profile from "../components/Profile/Profile";
 import Register from "../components/Register/Register";
 import Review from "../components/Review/Review";
+import UpdateReview from "../components/Review/UpdateReview";
 import Main from "../Layout/Main";
 
 export const router = createBrowserRouter([
@@ -29,6 +30,7 @@ export const router = createBrowserRouter([
         element: <Review></Review>,
       },
       { path: "/addproduct", element: <AddProduct></AddProduct> },
+
       {
         path: "/product/:id",
         element: <ProductDetails></ProductDetails>,

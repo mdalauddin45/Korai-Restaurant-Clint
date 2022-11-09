@@ -5,7 +5,7 @@ import {
   faStarHalfAlt,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-const ReviewInCard = ({ review, handleDeletReview }) => {
+const ReviewInCard = ({ review, handleDeletReview, handleUpdate }) => {
   const { authorName, authorImg, itemName, message, image, _id } = review;
   // console.log(review);
 
@@ -52,7 +52,7 @@ const ReviewInCard = ({ review, handleDeletReview }) => {
           </div>
           <div className="flex space-x-2 px-2">
             <button
-              type="button"
+              onClick={() => handleUpdate(_id)}
               className="px-5 py-2 font-semibold rounded-full bg-green-500 text-white "
             >
               Update
