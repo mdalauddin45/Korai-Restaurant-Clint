@@ -50,28 +50,32 @@ const UpdateReview = () => {
       .catch((err) => toast.error(err));
   };
   return (
-    <div>
-      <section className="p-6 bg-white text-gray-50 lg:col-span-3">
+    <div className="bg-[#eee]">
+      <section className="p-6  text-gray-50 lg:col-span-3">
+        <h1 className="text-4xl text-center text-gray-900 font-bold p-10">
+          <span className="text-green-400">Thank You</span> For{" "}
+          <span className="text-green-400">Update</span> Your feedback
+        </h1>
         <form
           onSubmit={handleSubmit}
           className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid w-96"
         >
-          <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900">
+          <fieldset className=" gap-6 p-6 rounded-md shadow-sm bg-white">
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full ">
-                <label className="text-sm">Your feedback </label>
+                <label className="text-xl text-black">Your feedback </label>
                 <input
                   name="message"
                   type="text"
                   placeholder="Enter Your Feed back"
-                  className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-green-400 border-gray-700 text-gray-100 px-5 py-4"
+                  className="w-full rounded-md   bg-gray-200 text-gray-900 px-5 py-4"
                   defaultValue={Update?.message}
                 />
               </div>
-              <div className="text-center px-28 sm:px-28 lg:px-16">
+              <div className="text-center px-32 sm:px-28 lg:px-18">
                 <button
                   type="submit"
-                  className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+                  className="px-5 py-2 font-semibold rounded bg-green-500 text-white "
                 >
                   Updated
                 </button>
@@ -80,6 +84,9 @@ const UpdateReview = () => {
           </fieldset>
         </form>
       </section>
+      <div>
+        <h1>hi</h1>
+      </div>
     </div>
   );
 };

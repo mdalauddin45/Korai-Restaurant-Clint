@@ -3,28 +3,30 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <section className="flex items-center h-full p-16 bg-gray-900 text-gray-100">
-      <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-        <div className="max-w-md text-center">
-          <h2 className="mb-8 font-extrabold text-9xl text-gray-600">
-            <span className="sr-only">Error</span>404
-          </h2>
-          <p className="text-2xl font-semibold md:text-3xl">
-            Sorry, we couldn't find this page.
-          </p>
-          <p className="mt-4 mb-8 text-gray-400">
-            But dont worry, you can find plenty of other things on our homepage.
-          </p>
-          <Link
-            rel="noopener noreferrer"
-            to="/"
-            className="px-8 py-3 font-semibold rounded bg-green-400 text-gray-900"
-          >
-            Back to homepage
+    <div className="max-w-screen-xl mx-auto text-center pt-20">
+      <img
+        className="w-100"
+        src="http://themes.potenzaglobalsolutions.com/html/nezzy/images/404.png"
+        alt=""
+      />
+      <br />
+      <div>
+        <h1 className="text-5xl font-bold text-gray-900 pb-10 pt-10">
+          Opps! Page Not Found
+        </h1>
+        <h1 className="text-gray-900 pb-10">
+          Can't find what you looking for? Take a moment and do a search below
+          or start from our <Link className="text-green-500">Home Page</Link>
+        </h1>
+        <div className="pb-32">
+          <Link to="/">
+            <span className="px-5 py-2 font-semibold rounded bg-green-500 text-white ">
+              Go back to the homepage
+            </span>
           </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
