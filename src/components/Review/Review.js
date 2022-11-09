@@ -34,7 +34,7 @@ const Review = () => {
 
   const navigate = useNavigate();
   const handleUpdate = (id) => {
-    navigate(`/review/${id}`);
+    navigate(`/review/update/${id}`);
   };
   if (reviews.length === 0) {
     return (
