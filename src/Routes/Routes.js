@@ -11,6 +11,7 @@ import Register from "../components/Register/Register";
 import Review from "../components/Review/Review";
 import UpdateReview from "../components/Review/UpdateReview";
 import Main from "../Layout/Main";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -27,7 +28,11 @@ export const router = createBrowserRouter([
       { path: "/blog", element: <Blog></Blog> },
       {
         path: "/review",
-        element: <Review></Review>,
+        element: (
+          <PrivateRoute>
+            <Review></Review>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/review/:id",
@@ -35,8 +40,14 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/review/${params.id}`),
       },
-      { path: "/addproduct", element: <AddProduct></AddProduct> },
-
+      {
+        path: "/addproduct",
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/product/:id",
         element: <ProductDetails></ProductDetails>,

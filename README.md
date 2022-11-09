@@ -21,12 +21,12 @@ Tailwind Components -> [Tailwind ](https://tailwindcss.com/)
 DaisyUi Components -> [daisyui](https://daisyui.com/)
 
 ⚪ Home page Created
-⚪ Home page slide Created
+⚪ Home page Bannar Created
 ⚪ home page product Created
 ⚪ User Profile page Created
-⚪ React to pdf page Created
-⚪ Check out page Created
-⚪ FAQ page Created
+⚪ product img click to view
+⚪ review page created
+⚪ Add products page Created
 ⚪ Blog page Created
 ⚪ Footer added
 ⚪ 404 Error page Created

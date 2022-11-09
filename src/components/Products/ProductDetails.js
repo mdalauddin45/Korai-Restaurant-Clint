@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { AuthContext } from "../../contexts/UserContext";
@@ -14,9 +14,9 @@ const ProductDetails = () => {
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
-    const authorName = user.displayName;
-    const authorImg = user.photoURL;
-    const email = user.email;
+    const authorName = user?.displayName;
+    const authorImg = user?.photoURL;
+    const email = user?.email;
     const message = form.message.value;
     const review = {
       _id,
@@ -47,10 +47,6 @@ const ProductDetails = () => {
       })
       .catch((err) => console.error(err));
   };
-  // showed per id in review
-  useEffect(() => {
-    fetch("");
-  }, []);
 
   return (
     <div className="px-10 py-20">
@@ -170,12 +166,23 @@ const ProductDetails = () => {
                   className="p-4 rounded-md resize-none text-gray-900 bg-gray-200"
                   required
                 ></input>
-                <button
-                  type="submit"
-                  className="py-4 my-8 font-semibold rounded-md text-gray-900 bg-green-400"
-                >
-                  Send feedback
-                </button>
+
+                {user?.email ? (
+                  <>
+                    <button
+                      type="submit"
+                      className="py-4 my-8 font-semibold rounded-md text-gray-900 bg-green-400"
+                    >
+                      Send feedback
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button className="py-4 my-8 font-semibold rounded-md text-gray-900 bg-green-400">
+                      <Link to="/login"> Send feedback</Link>
+                    </button>
+                  </>
+                )}
               </form>
             </div>
           </div>

@@ -34,7 +34,15 @@ const Review = () => {
   const handleUpdate = (id) => {
     navigate(`/review/${id}`);
   };
-
+  if (reviews.length === 0) {
+    return (
+      <div className="bg-[#eee]">
+        <h1 className="text-4xl text-center text-gray-900 font-bold p-10">
+          <span className="text-green-400">No Review</span> Added
+        </h1>
+      </div>
+    );
+  }
   return (
     <div className="bg-[#eee]">
       <h1 className="text-4xl text-center text-gray-900 font-bold p-10">
