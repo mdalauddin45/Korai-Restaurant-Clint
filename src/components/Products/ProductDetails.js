@@ -14,16 +14,18 @@ const ProductDetails = () => {
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
-    const coustomerName = user.displayName;
-    // const image = user.photoURL;
+    const authorName = user.displayName;
+    const authorImg = user.photoURL;
     const email = user.email;
     const message = form.message.value;
     const review = {
       _id,
       itemName: name,
-      coustomerName,
+      authorName,
       message,
       email,
+      image,
+      authorImg,
     };
     console.log(review);
     fetch("http://localhost:5000/review", {
