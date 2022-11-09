@@ -49,6 +49,21 @@ const ReviewInCard = ({ review }) => {
             <p>Item Name: {itemName}</p>
             <p>{message}</p>
           </div>
+          <div className="flex space-x-2 px-2">
+            <button
+              type="button"
+              className="px-5 py-2 font-semibold rounded-full bg-green-500 text-white "
+            >
+              Update
+            </button>
+
+            <button
+              type="button"
+              className="px-5 py-2 font-semibold rounded-full bg-green-500 text-white "
+            >
+              Delete
+            </button>
+          </div>
         </div>
         <div>
           <img src={image} alt="" />

@@ -89,43 +89,43 @@ const Login = () => {
   return (
     <div className="bg-[#eee]">
       <div className="max-w-screen-xl mx-auto p-10">
-        <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl bg-white dark:text-gray-900 shadow-xl">
+        <div className="w-fullmax-w-screen-xl mx-auto max-w-md p-8 space-y-3 rounded-xl bg-white text-gray-900 shadow-xl">
           <h1 className="text-2xl font-bold text-center">Sign in</h1>
           <form
             onSubmit={handleSubmit}
             className="space-y-6 ng-untouched ng-pristine ng-valid"
           >
             <div className="space-y-1 text-sm">
-              <label className="block dark:text-gray-900">Email</label>
+              <label className="block text-gray-900">Email</label>
               <input
                 type="text"
                 name="email"
                 id="email"
                 placeholder="Enter Your Email"
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
+                className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-green-400"
               />
             </div>
             <div className="space-y-1 text-sm">
-              <label className="block dark:text-gray-400">Password</label>
+              <label className="block text-gray-400">Password</label>
               <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
-                className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-100 dark:text-gray-900 focus:dark:border-green-400"
+                className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-green-400"
               />
             </div>
             <p>{error}</p>
-            <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-green-400">
+            <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-green-400">
               Sign in
             </button>
           </form>
           <div className="flex items-center pt-4 space-x-1">
-            <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-            <p className="px-3 text-sm dark:text-gray-400">
+            <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
+            <p className="px-3 text-sm text-gray-400">
               Login with social accounts
             </p>
-            <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
+            <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
           </div>
           <div className="flex justify-center space-x-4">
             <button
@@ -155,7 +155,7 @@ const Login = () => {
               </svg>
             </button>
           </div>
-          <p className="text-xs text-center sm:px-6 dark:text-gray-400">
+          <p className="text-xs text-center sm:px-6 text-gray-400">
             Don't have an account?
             <Link
               rel="noopener noreferrer"

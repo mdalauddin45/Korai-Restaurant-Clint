@@ -127,12 +127,12 @@ const Navbar = () => {
           ) : (
             <>
               <Link to="/login">
-                <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white ">
+                <button className=" bg-green-600 block w-full p-3 text-center rounded text-white ">
                   Login
                 </button>
               </Link>
               <Link to="/register" className="m-2">
-                <button className=" dark:bg-green-600 block w-full p-3 text-center rounded dark:text-white">
+                <button className=" bg-green-600 block w-full p-3 text-center rounded text-white">
                   Register
                 </button>
               </Link>

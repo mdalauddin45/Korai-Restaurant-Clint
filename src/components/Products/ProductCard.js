@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
         </div>
         <div>
           <Link to={`/product/${_id}`}>
-            <button className="block w-full p-3 text-center rounded-sm text-white font-semibold dark:bg-green-500">
+            <button className="block w-full p-3 text-center rounded-sm text-white font-semibold bg-green-500">
               Details
             </button>
           </Link>

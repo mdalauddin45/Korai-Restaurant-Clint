@@ -19,7 +19,7 @@ const Burger2 = () => {
               <Link to="/product">
                 <button
                   type="button"
-                  className="px-8 py-3 font-semibold rounded-full dark:bg-green-500 dark:text-white "
+                  className="px-8 py-3 font-semibold rounded-full bg-green-500 text-white "
                 >
                   BUY NOW
                 </button>
