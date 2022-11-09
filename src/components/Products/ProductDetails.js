@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,6 +45,10 @@ const ProductDetails = () => {
       })
       .catch((err) => console.error(err));
   };
+  // showed per id in review
+  useEffect(() => {
+    fetch("");
+  }, []);
 
   return (
     <div className="px-10 py-20">
