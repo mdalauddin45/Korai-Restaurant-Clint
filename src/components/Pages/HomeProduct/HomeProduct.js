@@ -29,7 +29,7 @@ function HomeProduct() {
         <Link to="/product">
           <button
             type="button"
-            className="px-8 py-3 font-semibold rounded-fullbg-green-500 text-white "
+            className="px-8 py-3 font-semibold rounded-full bg-green-500 text-white "
           >
             See All
           </button>
