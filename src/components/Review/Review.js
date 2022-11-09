@@ -32,7 +32,7 @@ const Review = () => {
 
   const navigate = useNavigate();
   const handleUpdate = (id) => {
-    navigate(`/review/update/${id}`);
+    navigate(`/review/${id}`);
   };
 
   return (

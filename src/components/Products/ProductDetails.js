@@ -27,7 +27,7 @@ const ProductDetails = () => {
       image,
       authorImg,
     };
-    console.log(review);
+    // console.log(review);
     fetch("http://localhost:5000/review", {
       method: "POST",
       headers: {
