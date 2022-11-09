@@ -5,24 +5,26 @@ import { AuthContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 
 const Review = () => {
-  const [loading, setLoading] = useState(false);
   const [reviews, setReviews] = useState([]);
   const { user } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     fetch(`http://localhost:5000/review?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setReviews(data?.data));
-  }, [user.email]);
+  }, [loading, user.email]);
 
   const handleDeletReview = (id) => {
+    console.log(id);
     fetch(`http://localhost:5000/review/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
-        toast.success(data.message);
-        setLoading(!loading);
         if (data.success) {
+          toast.success(data.message);
+          setLoading(!loading);
         } else {
           toast.error(data.error);
         }

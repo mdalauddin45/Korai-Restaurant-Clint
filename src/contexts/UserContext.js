@@ -89,6 +89,7 @@ const UserContext = ({ children }) => {
     logout,
     signin,
     loading,
+    setLoading,
     facebookSignIn,
     gitHunSignIn,
     updateName,
