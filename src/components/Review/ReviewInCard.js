@@ -5,9 +5,10 @@ import {
   faStarHalfAlt,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-const ReviewInCard = ({ review }) => {
-  const { authorName, authorImg, itemName, message, image } = review;
-  console.log(review);
+const ReviewInCard = ({ review, handleDeletReview }) => {
+  const { authorName, authorImg, itemName, message, image, _id } = review;
+  // console.log(review);
+
   return (
     <div className="max-w-screen-xl mx-auto ">
       <div className=" p-2 mb-10 shadow-xl flex justify-between  bg-gray-50 text-gray-900  ">
@@ -58,6 +59,7 @@ const ReviewInCard = ({ review }) => {
             </button>
 
             <button
+              onClick={() => handleDeletReview(_id)}
               type="button"
               className="px-5 py-2 font-semibold rounded-full bg-green-500 text-white "
             >
