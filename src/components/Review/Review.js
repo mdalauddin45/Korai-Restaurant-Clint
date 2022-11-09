@@ -22,12 +22,15 @@ const Review = () => {
         return res.json();
       })
       .then((data) => setReviews(data?.data));
-  }, [loading, user?.email]);
+  }, [loading, user?.email, logout]);
 
   const handleDeletReview = (id) => {
     console.log(id);
     fetch(`http://localhost:5000/review/${id}`, {
       method: "DELETE",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
     })
       .then((res) => res.json())
       .then((data) => {
