@@ -10,7 +10,7 @@ const ReviewInCard = ({ review, handleDeletReview, handleUpdate }) => {
   // console.log(review);
 
   return (
-    <div className="max-w-screen-xl mx-auto ">
+    <div className="max-w-screen-xl mx-auto pb-5">
       <div className=" p-2 mb-10 shadow-xl flex justify-between  bg-gray-50 text-gray-900  ">
         <div>
           <div className=" p-4 w-100">

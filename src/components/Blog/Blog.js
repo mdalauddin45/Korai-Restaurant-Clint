@@ -6,7 +6,7 @@ const Blog = () => {
       <h1 className="text-5xl text-center text-gray-900 font-bold p-10">
         <span className="text-green-400">Welcome!</span> To Our Blog
       </h1>
-      <div className="bg-white text-gray-900 ">
+      <div className="bg-white text-gray-900 m-10">
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-lg bg-white">
           <div className="mt-3">
             <p className="text-2xl font-bold">

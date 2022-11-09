@@ -28,7 +28,7 @@ const Login = () => {
         const currentUser = {
           email: user.email,
         };
-        console.log(user);
+        // console.log(currentUser);
         //get token of jwt
         fetch("http://localhost:5000/jwt", {
           method: "POST",
@@ -115,7 +115,7 @@ const Login = () => {
                 className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-green-400"
               />
             </div>
-            <p>{error}</p>
+            <p className="text-red-500">{error}</p>
             <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-green-400">
               Sign in
             </button>

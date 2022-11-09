@@ -171,14 +171,14 @@ const ProductDetails = () => {
                   <>
                     <button
                       type="submit"
-                      className="py-4 my-8 font-semibold rounded-md text-gray-900 bg-green-400"
+                      className="py-4 my-8 font-semibold rounded-md text-white bg-green-400"
                     >
                       Send feedback
                     </button>
                   </>
                 ) : (
                   <>
-                    <button className="py-4 my-8 font-semibold rounded-md text-gray-900 bg-green-400">
+                    <button className="py-4 my-8 font-semibold rounded-md text-white bg-green-400">
                       <Link to="/login"> Send feedback</Link>
                     </button>
                   </>

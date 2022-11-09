@@ -6,14 +6,23 @@ import { useNavigate } from "react-router-dom";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/review?email=${user.email}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:5000/review?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          logout();
+        }
+        return res.json();
+      })
       .then((data) => setReviews(data?.data));
-  }, [loading, user.email]);
+  }, [loading, user?.email]);
 
   const handleDeletReview = (id) => {
     console.log(id);
