@@ -114,11 +114,20 @@ const Navbar = () => {
         <div className="navbar-end">
           {user?.email ? (
             <>
-              <Link
-                to="/profile"
-                className="py-1 px-2  rounded-full bg-green-400 text-xl text-white"
-              >
-                <FontAwesomeIcon icon={faUser} />
+              <Link to="/profile">
+                {user.photoURL ? (
+                  <div>
+                    <img
+                      className="object-cover w-12 h-12 rounded-full bg-gray-500"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </div>
+                ) : (
+                  <div className="py-1 px-2  rounded-full bg-green-400 text-xl text-white">
+                    <FontAwesomeIcon icon={faUser} />
+                  </div>
+                )}
               </Link>
               <button className="p-2" onClick={handleLogOut}>
                 <FontAwesomeIcon icon={faRightFromBracket} />

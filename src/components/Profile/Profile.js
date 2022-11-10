@@ -12,19 +12,7 @@ const Profile = () => {
       <div className="max-w-screen-xl mx-auto p-20">
         <div className="max-w-md p-8 sm:flex sm:space-x-6 bg-gray-900 text-gray-100">
           <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
-            {user.photoURL ? (
-              <>
-                <img
-                  src="../../assets/Products image/download.png"
-                  alt=""
-                  className="object-cover object-center w-full h-full rounded bg-gray-500"
-                />
-              </>
-            ) : (
-              <>
-                <img src={photoURL} alt="" />
-              </>
-            )}
+            <img src={photoURL} alt="" />
           </div>
           <div className="flex flex-col space-y-4">
             <div>
