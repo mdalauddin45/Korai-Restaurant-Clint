@@ -70,9 +70,29 @@ const Register = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
+        const currentUser = {
+          email: user.email,
+        };
+        // console.log(user);
         if (user) {
           toast.success("Sign up Succesfuly");
           navigate(from, { replace: true });
+          //get token of jwt
+          fetch("https://assignment-11-server-kappa.vercel.app/jwt", {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(currentUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              localStorage.setItem("token", data.token);
+              toast.success("Sign Up Succesfuly");
+              navigate(from, { replace: true });
+            })
+
+            .catch((error) => console.error(error));
         }
       })
 
