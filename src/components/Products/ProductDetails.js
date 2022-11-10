@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +8,11 @@ import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { user } = useContext(AuthContext);
+  const [comments, setComment] = useState([]);
+  const [loading, setLoading] = useState(false);
   const products = useLoaderData();
   const { image, name, price, rating, description, _id } = products.data;
+
   //   console.log(products);
   const handleReview = (e) => {
     e.preventDefault();
@@ -39,8 +42,9 @@ const ProductDetails = () => {
       .then((data) => {
         console.log(data);
         if (data.success === true) {
-          toast.success("Thank your For Review your Review added Successfully");
+          // toast.success("Thank your For Review your Review added Successfully");
           form.reset();
+          setLoading(!loading);
         } else {
           toast.error("Review already added");
         }
@@ -48,6 +52,18 @@ const ProductDetails = () => {
       .catch((err) => console.error(err));
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:5000/review/${_id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.data.message) {
+          toast.success("Thank your For Review your Review added Successfully");
+          setComment(data?.data);
+        }
+      })
+      .catch((err) => toast.error(err));
+  }, [loading]);
+  console.log(comments);
   return (
     <div className="px-10 py-20">
       <div className=" p-2 max-w-screen-xl mx-auto  shadow-xl  bg-gray-50 text-gray-900">
@@ -141,6 +157,85 @@ const ProductDetails = () => {
         <h1 className="text-center text-2xl text-gray-600 font-bold">
           COUSTOMER REVIEW
         </h1>
+      </div>
+      <div>
+        {comments?.itemName ? (
+          <>
+            {" "}
+            <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-white text-gray-900 shadow-lg">
+              <div className="flex justify-between p-4">
+                <div className="flex space-x-4">
+                  <div>
+                    <img
+                      src={comments?.authorImg}
+                      alt=""
+                      className="object-cover w-12 h-12 rounded-full bg-gray-500"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">{comments?.authorName}</h4>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-2 dark:text-yellow-500">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    className="w-5 h-5 fill-current"
+                  >
+                    <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
+                  </svg>
+                  <span className="text-xl font-bold">4.5</span>
+                </div>
+              </div>
+              <div className="p-4 space-y-2 text-xl text-gray-900">
+                <p>{comments?.message}</p>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {comments?.data === null ? (
+              <>
+                {" "}
+                <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 bg-white text-gray-900 shadow-lg">
+                  <div className="flex justify-between p-4">
+                    <div className="flex space-x-4">
+                      <div>
+                        <img
+                          src={comments?.authorImg}
+                          alt=""
+                          className="object-cover w-12 h-12 rounded-full bg-gray-500"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="font-bold">{comments?.authorName}</h4>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2 dark:text-yellow-500">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        className="w-5 h-5 fill-current"
+                      >
+                        <path d="M494,198.671a40.536,40.536,0,0,0-32.174-27.592L345.917,152.242,292.185,47.828a40.7,40.7,0,0,0-72.37,0L166.083,152.242,50.176,171.079a40.7,40.7,0,0,0-22.364,68.827l82.7,83.368-17.9,116.055a40.672,40.672,0,0,0,58.548,42.538L256,428.977l104.843,52.89a40.69,40.69,0,0,0,58.548-42.538l-17.9-116.055,82.7-83.368A40.538,40.538,0,0,0,494,198.671Zm-32.53,18.7L367.4,312.2l20.364,132.01a8.671,8.671,0,0,1-12.509,9.088L256,393.136,136.744,453.3a8.671,8.671,0,0,1-12.509-9.088L144.6,312.2,50.531,217.37a8.7,8.7,0,0,1,4.778-14.706L187.15,181.238,248.269,62.471a8.694,8.694,0,0,1,15.462,0L324.85,181.238l131.841,21.426A8.7,8.7,0,0,1,461.469,217.37Z"></path>
+                      </svg>
+                      <span className="text-xl font-bold">4.5</span>
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-2 text-xl text-gray-900">
+                    <p>{comments?.message}</p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <h1 className="text-4xl text-center text-gray-900 font-bold p-10">
+                  <span className="text-green-400">No Review</span> Added
+                </h1>
+              </>
+            )}
+          </>
+        )}
       </div>
       <div className="pt-5">
         <div className="pt-5">
