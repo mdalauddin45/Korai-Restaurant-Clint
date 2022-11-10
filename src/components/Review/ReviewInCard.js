@@ -68,7 +68,7 @@ const ReviewInCard = ({ review, handleDeletReview, handleUpdate }) => {
           </div>
         </div>
         <div>
-          <img src={image} alt="" />
+          <img className="w-72" src={image} alt="" />
         </div>
       </div>
     </div>
