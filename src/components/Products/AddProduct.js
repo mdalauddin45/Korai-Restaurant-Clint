@@ -1,7 +1,9 @@
 import React from "react";
 import { toast } from "react-toastify";
+import useTitle from "../../Hook/UseTitle";
 
 const AddProduct = () => {
+  useTitle("Add Service");
   const handleSubmit = (event) => {
     event.preventDefault();
     const product = {

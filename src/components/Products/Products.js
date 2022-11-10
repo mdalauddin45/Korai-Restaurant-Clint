@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 
 const Products = () => {
   const [allProduct, setallProduct] = useState([]);
-  useTitle("Products");
+  useTitle("Services");
 
   useEffect(() => {
     fetch("http://localhost:5000/product")

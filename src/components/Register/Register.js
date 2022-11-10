@@ -22,6 +22,7 @@ const Register = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
     console.log(name, email, password);
@@ -36,7 +37,7 @@ const Register = () => {
         setError("");
 
         // Update Name
-        updateName(name)
+        updateName(name, photoURL)
           .then(() => {
             //get token of jwt
             fetch("http://localhost:5000/jwt", {
@@ -116,6 +117,15 @@ const Register = () => {
                 name="name"
                 id="name"
                 placeholder="Enter Your Name"
+                className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-green-400"
+              />
+            </div>
+            <div className="space-y-1 text-sm">
+              <label className="block text-gray-900">Photo URL</label>
+              <input
+                type="text"
+                name="photoURL"
+                placeholder="Enter Your Photo URL"
                 className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-100 text-gray-900 focus:border-green-400"
               />
             </div>
