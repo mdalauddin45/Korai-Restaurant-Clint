@@ -8,12 +8,12 @@ Github Link -> [Git Link](https://github.com/Porgramming-Hero-web-course/b6a11-s
 
 ## Live Link
 
-Hosted in Firebase -> [Korai](https://assignment-project-4e0e6.web.app)
+Hosted in Firebase -> [Korai](https://korai-cox.web.app/)
 
 ## API
 
-Documentation Link -> [Course API]()
-Documentation Link -> [Category API]()
+Documentation Link -> [Product API](https://assignment-11-server-kappa.vercel.app/product/)
+Documentation Link -> [review API](https://assignment-11-server-kappa.vercel.app/review/)
 
 ## Resources & Credits
 
@@ -27,6 +27,8 @@ DaisyUi Components -> [daisyui](https://daisyui.com/)
 ⚪ product img click to view
 ⚪ review page created
 ⚪ Add products page Created
+⚪ update products Button add
+⚪ Delet products Button add
 ⚪ Blog page Created
 ⚪ Footer added
 ⚪ 404 Error page Created
