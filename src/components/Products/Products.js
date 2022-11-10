@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useTitle from "../../Hook/UseTitle";
 import ProductCard from "./ProductCard";
 
 const Products = () => {
   const [allProduct, setallProduct] = useState([]);
+  useTitle("Products");
 
   useEffect(() => {
     fetch("http://localhost:5000/product")

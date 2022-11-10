@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useTitle from "../../Hook/UseTitle";
 
 const ErrorPage = () => {
+  useTitle("Error");
   return (
     <div className="max-w-screen-xl mx-auto text-center pt-20">
       <img

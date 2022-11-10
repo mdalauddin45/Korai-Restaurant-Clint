@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../contexts/UserContext";
+import useTitle from "../../Hook/UseTitle";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
   const { displayName, email, uid, photoURL } = user;
-  console.log(user);
+  useTitle("Profile");
+  // console.log(user);
   return (
     <div className="bg-[#eee]">
       <div className="max-w-screen-xl mx-auto p-20">

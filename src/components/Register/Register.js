@@ -5,11 +5,13 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../contexts/UserContext";
+import useTitle from "../../Hook/UseTitle";
 
 const Register = () => {
   const [error, setError] = useState(" ");
   const { signInWithGoogle, gitHunSignIn, createUser, updateName } =
     useContext(AuthContext);
+  useTitle("register");
   // navigate
   const navigate = useNavigate();
   const location = useLocation();

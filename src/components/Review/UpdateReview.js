@@ -4,6 +4,7 @@ import { faMessages } from "@fortawesome/sharp-solid-svg-icons";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import useTitle from "../../Hook/UseTitle";
 
 const UpdateReview = () => {
   const router = useParams();
@@ -11,7 +12,7 @@ const UpdateReview = () => {
   const [Update, setUpdate] = useState({});
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
+  useTitle("update review");
   useEffect(() => {
     fetch(` http://localhost:5000/review/${id}`)
       .then((res) => res.json())

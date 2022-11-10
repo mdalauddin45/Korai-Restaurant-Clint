@@ -3,12 +3,13 @@ import { toast } from "react-toastify";
 import ReviewInCard from "./ReviewInCard";
 import { AuthContext } from "../../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../Hook/UseTitle";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   const { user, logout } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
-
+  useTitle("Review");
   useEffect(() => {
     fetch(`http://localhost:5000/review?email=${user?.email}`, {
       headers: {
