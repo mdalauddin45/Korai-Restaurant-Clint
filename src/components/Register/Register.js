@@ -25,14 +25,14 @@ const Register = () => {
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    // console.log(name, email, password);
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         const currentUser = {
           email: user.email,
         };
-        console.log(user);
+        // console.log(user);
         form.reset();
         setError("");
 
@@ -40,7 +40,7 @@ const Register = () => {
         updateName(name, photoURL)
           .then(() => {
             //get token of jwt
-            fetch("http://localhost:5000/jwt", {
+            fetch("https://assignment-11-server-kappa.vercel.app/jwt", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -70,9 +70,10 @@ const Register = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success("Sign up Succesfuly");
-        navigate(from, { replace: true });
+        if (user) {
+          toast.success("Sign up Succesfuly");
+          navigate(from, { replace: true });
+        }
       })
 
       .catch((error) => {
@@ -87,9 +88,10 @@ const Register = () => {
     gitHunSignIn()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success("Sign up Succesfuly");
-        navigate(from, { replace: true });
+        if (user) {
+          toast.success("Sign up Succesfuly");
+          navigate(from, { replace: true });
+        }
       })
 
       .catch((error) => {

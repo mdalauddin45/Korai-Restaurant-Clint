@@ -50,7 +50,9 @@ export const router = createBrowserRouter([
         path: "/product/:id",
         element: <ProductDetails></ProductDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://assignment-11-server-kappa.vercel.app/product/${params.id}`
+          ),
       },
     ],
   },

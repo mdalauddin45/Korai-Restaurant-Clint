@@ -14,7 +14,7 @@ const UpdateReview = () => {
   const navigate = useNavigate();
   useTitle("update review");
   useEffect(() => {
-    fetch(` http://localhost:5000/review/${id}`)
+    fetch(` https://assignment-11-server-kappa.vercel.app/review/${id}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -33,8 +33,8 @@ const UpdateReview = () => {
     const Update = {
       message: event.target.message.value,
     };
-    console.log(Update);
-    fetch(` http://localhost:5000/review/${id}`, {
+    // console.log(Update);
+    fetch(` https://assignment-11-server-kappa.vercel.app/review/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -43,7 +43,7 @@ const UpdateReview = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success) {
           toast.success(data.message);
           navigate("/review");

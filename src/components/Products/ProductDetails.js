@@ -31,7 +31,7 @@ const ProductDetails = () => {
       authorImg,
     };
     // console.log(review);
-    fetch("http://localhost:5000/review", {
+    fetch("https://assignment-11-server-kappa.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -40,9 +40,9 @@ const ProductDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success === true) {
-          // toast.success("Thank your For Review your Review added Successfully");
+          toast.success("Thank your For Review your Review added Successfully");
           form.reset();
           setLoading(!loading);
         } else {
@@ -53,17 +53,16 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/review/${_id}`)
+    fetch(`https://assignment-11-server-kappa.vercel.app/review/${_id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.data.message) {
-          toast.success("Thank your For Review your Review added Successfully");
           setComment(data?.data);
         }
       })
       .catch((err) => toast.error(err));
-  }, [loading]);
-  console.log(comments);
+  }, [loading, _id]);
+  // console.log(comments);
   return (
     <div className="px-10 py-20">
       <div className=" p-2 max-w-screen-xl mx-auto  shadow-xl  bg-gray-50 text-gray-900">

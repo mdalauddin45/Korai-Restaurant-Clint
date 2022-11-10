@@ -12,7 +12,7 @@ const Profile = () => {
       <div className="max-w-screen-xl mx-auto p-20">
         <div className="max-w-md p-8 sm:flex sm:space-x-6 bg-gray-900 text-gray-100">
           <div className="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
-            <img src={photoURL} alt="" />
+            <img className="rounded-full h-32 w-60" src={photoURL} alt="" />
           </div>
           <div className="flex flex-col space-y-4">
             <div>
@@ -33,7 +33,7 @@ const Profile = () => {
                 </svg>
                 <span className="text-gray-400">{email}</span>
               </span>
-              <span className="flex items-center space-x-2">
+              <h1 className="flex items-center space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -46,7 +46,7 @@ const Profile = () => {
                   ></path>
                 </svg>
                 <span className="text-gray-400">{uid}</span>
-              </span>
+              </h1>
             </div>
           </div>
         </div>

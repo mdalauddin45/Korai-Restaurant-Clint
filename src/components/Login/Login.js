@@ -22,7 +22,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     signin(email, password)
       .then((result) => {
         const user = result.user;
@@ -31,7 +31,7 @@ const Login = () => {
         };
         // console.log(currentUser);
         //get token of jwt
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://assignment-11-server-kappa.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -60,9 +60,10 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         const user = result.user;
-        console.log(user);
-        toast.success("Sign up Succesfuly");
-        navigate(from, { replace: true });
+        if (user) {
+          toast.success("Sign up Succesfuly");
+          navigate(from, { replace: true });
+        }
       })
 
       .catch((error) => {

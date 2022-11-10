@@ -14,7 +14,7 @@ const AddProduct = () => {
       description: event.target.description.value,
     };
     // console.log(product);
-    fetch("http://localhost:5000/product", {
+    fetch("https://assignment-11-server-kappa.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -23,7 +23,7 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.success) {
           toast.success(data.message);
           event.target.reset();

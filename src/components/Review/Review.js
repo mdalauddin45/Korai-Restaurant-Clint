@@ -11,11 +11,14 @@ const Review = () => {
   const [loading, setLoading] = useState(false);
   useTitle("Review");
   useEffect(() => {
-    fetch(`http://localhost:5000/review?email=${user?.email}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    })
+    fetch(
+      `https://assignment-11-server-kappa.vercel.app/review?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => {
         if (res.status === 401 || res.status === 403) {
           logout();
@@ -26,8 +29,8 @@ const Review = () => {
   }, [loading, user?.email, logout]);
 
   const handleDeletReview = (id) => {
-    console.log(id);
-    fetch(`http://localhost:5000/review/${id}`, {
+    // console.log(id);
+    fetch(`https://assignment-11-server-kappa.vercel.app/review/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("token")}`,
