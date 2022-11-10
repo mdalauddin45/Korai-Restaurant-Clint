@@ -11,7 +11,7 @@ const Register = () => {
   const [error, setError] = useState(" ");
   const { signInWithGoogle, gitHunSignIn, createUser, updateName } =
     useContext(AuthContext);
-  useTitle("register");
+  useTitle("Register");
   // navigate
   const navigate = useNavigate();
   const location = useLocation();
